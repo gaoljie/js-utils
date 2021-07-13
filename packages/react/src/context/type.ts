@@ -1,7 +1,7 @@
 export type RawContextState = {
-    count: number;
-}
+  count: number;
+};
 
 export type ContextState = RawContextState & {
-    doubleCount: number
-}
+  doubleCount: number;
+};

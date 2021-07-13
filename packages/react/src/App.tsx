@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import {useGlobalMutator, useGlobalState} from "./context";
-import {Types} from "./context/action";
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useGlobalMutator, useGlobalState } from "./context";
+import { Types } from "./context/action";
 
 function App() {
-  const {count, doubleCount} = useGlobalState()
-  const dispatch = useGlobalMutator()
+  const { count, doubleCount } = useGlobalState();
+  const dispatch = useGlobalMutator();
 
   return (
     <div className="App">
@@ -14,13 +14,17 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => dispatch(
-              {type: Types.UPDATE_COUNT,
+          <button
+            type="button"
+            onClick={() =>
+              dispatch({
+                type: Types.UPDATE_COUNT,
                 payload: {
-                count: count+ 1
-                }
-              }
-          )}>
+                  count: count + 1,
+                },
+              })
+            }
+          >
             count is: {count}
             double count is: {doubleCount}
           </button>
@@ -37,7 +41,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -49,7 +53,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -4,10 +4,9 @@ import "./App.css";
 import { useGlobalMutator, useGlobalState } from "./context";
 import { Types } from "./context/action";
 
-function App() {
+function App(): React.ReactNode {
   const { count, doubleCount } = useGlobalState();
   const dispatch = useGlobalMutator();
-
   return (
     <div className="App">
       <header className="App-header">

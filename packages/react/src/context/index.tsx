@@ -11,7 +11,11 @@ export const GlobalMutatorContext = createContext<Dispatch<Action> | undefined>(
   undefined
 );
 
-const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
+const GlobalProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.ReactNode => {
   const [state, dispatch] = useReducer(reducer, { count: 0 }, calculateState);
 
   return (

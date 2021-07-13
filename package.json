@@ -1,0 +1,13 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "yarn workspace react start"
+  },
+  "workspaces": ["packages/*"],
+  "repository": "git@github.com:gaoljie/js-utils.git",
+  "author": "gaoljie@gmail.com",
+  "license": "MIT"
+}
